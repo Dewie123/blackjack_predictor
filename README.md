@@ -85,13 +85,14 @@ Simulated using a realistic blackjack engine based on standard Las Vegas rules:
   - Player's second card
   - True count
   - Run count
+  - Cards remaining in shoe
 
 - **Outputs**:
   - Win probability (float)
   - Recommended move (str): e.g., Hit, Stand, Double, etc.
 
 - **Algorithm**:  
-  - [XGBoost](https://xgboost.readthedocs.io/en/stable/) – a powerful gradient boosting decision tree model ideal for tabular data.
+  - [XGBoost](https://xgboost.readthedocs.io/en/stable/)
 
 ---
 

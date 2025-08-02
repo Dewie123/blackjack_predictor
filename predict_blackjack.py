@@ -5,7 +5,7 @@ import joblib
 win_model = joblib.load("win_model.pkl")
 action_model = joblib.load("action_model.pkl")
 le = joblib.load("label_encoder.pkl")
-X = joblib.load("X_columns.pkl") 
+
 
 def predict_blackjack_strategy(dealer_up, initial_hand, true_count, run_count, cards_remaining):
     card1, card2 = initial_hand
