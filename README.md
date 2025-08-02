@@ -98,3 +98,6 @@ Simulated using a realistic blackjack engine based on standard Las Vegas rules:
 
 ## Example Output
 ![Example output](assets/Example_Output.PNG)
+
+## Multi Deck Perfect Strategy - Mathematically derived optimal move.
+![Multi Deck Perfect Strategy](assets/Multi_Deck_Perfect_Strategy_Hit_Soft_17.PNG)
