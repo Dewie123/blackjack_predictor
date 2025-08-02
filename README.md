@@ -65,18 +65,12 @@ Simulated using a realistic blackjack engine based on standard Las Vegas rules:
     cd blackjack_predictor_XGBoost
     ```
 
-2. **(Optional but recommended) Create a virtual environment**:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate    # On Windows: venv\Scripts\activate
-    ```
-
-3. **Install required packages**:
+2. **Install required packages**:
     ```bash
     pip install -r requirements.txt
     ```
 
-4. **Run the predictor**:
+3. **Run the predictor**:
     ```bash
     python blackjack_predictor.py
     ```
