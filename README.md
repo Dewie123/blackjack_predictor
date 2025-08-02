@@ -97,4 +97,4 @@ Simulated using a realistic blackjack engine based on standard Las Vegas rules:
 ---
 
 ## Example Output
-
+![Example output](screenshots/output.png)
