@@ -157,6 +157,15 @@ Simulated using a realistic blackjack engine based on standard Las Vegas rules:
 
 ---
 
+## Project Structure
+
+| File | Description |
+|------|-------------|
+| **`blackjack_model_taka.ipynb`** | Contains the complete machine learning pipeline: data exploration, preprocessing, model definition, training using XGBoost, and SHAP-based model explainability. |
+| **`predict_blackjack.py`** | Loads the pre-trained models and serves as the main interface to predict the player's win percentage and recommend the optimal move based on game state. This script represents the core functionality of the project. |
+
+---
+
 ## Example Output
 ![Example output](assets/Example_Output.PNG)
 
