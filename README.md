@@ -1,6 +1,6 @@
 # Blackjack Predictor using XGBoost
 
-This project implements a machine learning model using **XGBoost** to predict a player's **win percentage** against the dealer's up card in **Blackjack**, and recommends the **optimal action** to take — mimicking the *Perfect Strategy* used by professional players and card counters.
+This project implements a machine learning model using **XGBoost** to predict a player's **win percentage** against the dealer's up card in **Blackjack**, and recommends the **optimal action** to take , replicating the *Perfect Strategy* used by professional players and card counters.
 
 ---
 
