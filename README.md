@@ -176,34 +176,34 @@ Simulated using a realistic blackjack engine based on standard Las Vegas rules:
 
 ## Upcoming Features & Planned Improvements
 
-This project is actively being developed. Below are some planned enhancements to improve functionality, usability, and automation:
+This project is actively being developed. These are the upcoming improvements:
 
 ### Model Intelligence
-- [ ] Continuous Learning with Feedback Loop  
+- Continuous Learning with Feedback Loop  
   Enable the model to adapt over time by learning from user decisions and outcomes (reinforcement-style feedback).
 
-- [ ] Multi-Move Prediction  
+- Multi-Move Prediction  
   Allow the model to predict and recommend a sequence of optimal moves (e.g., for the next 2–3 turns).
 
-- [ ] Risk to Reward Tolerance Threshold  
+- Risk to Reward Tolerance Threshold  
   Add a configurable parameter to adjust the playstyle of the model, allowing users to specify how much deviation from the perfect expected value (EV) strategy they prefer.
 
 ### User Interface
-- [ ] Graphical User Interface (GUI)  
+- Graphical User Interface (GUI)  
   Build a desktop-friendly GUI for easy use without command-line interaction.
 
 ### Real-Time Automation
-- [ ] Live Table Input from Online Casino Footage  
+- Live Table Input from Online Casino Footage  
   Integrate visual recognition (e.g., using OpenCV) to extract card values from real poker table footage.
 
-- [ ] Automated Card Counting  
+- Automated Card Counting  
   Continuously track visible cards and maintain an updated true count without manual input.
 
 ### Real-Time Game Analysis (Displayed on GUI)
-- [ ] Dealer’s Range Estimation  
+- Dealer’s Range Estimation  
   Display the predicted range of the dealer’s hidden hand based on current visible cards and card count.
 
-- [ ] Win Probability Display  
+- Win Probability Display  
   Show the player's real-time win percentage directly on the GUI interface.
 
 ---
