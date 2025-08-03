@@ -4,6 +4,17 @@ This project implements a machine learning model using **XGBoost** to predict a 
 
 ---
 
+
+## Demo Video
+
+Watch the YouTube Demo:  
+[https://www.youtube.com/watch?v=NimHpAx_hWY](https://www.youtube.com/watch?v=NimHpAx_hWY)
+
+This video shows the model in action, including how it takes input (dealer up card, player hand, true count) and outputs the win percentage and optimal move.
+
+---
+
+
 ## Project Highlights
 
 - **Win Probability Prediction**: Predicts the likelihood of a player's starting hand beating the dealer’s up card.
@@ -43,17 +54,9 @@ Critically, the finalized XGBoost model attained a **remarkable 98% efficacy**, 
 
 Consequently, the marginal gains from deploying a deep neural architecture do not justify the added complexity, opacity, and resource demands. The XGBoost solution represents a **best-in-class synthesis of accuracy, robustness, and transparency**, perfectly suited for this specialized application.
 
----
-
-
-## Demo Video
-
-Watch the YouTube Demo:  
-[https://www.youtube.com/watch?v=NimHpAx_hWY](https://www.youtube.com/watch?v=NimHpAx_hWY)
-
-This video shows the model in action, including how it takes input (dealer up card, player hand, true count) and outputs the win percentage and optimal move.
 
 ---
+
 
 ## Dataset
 
@@ -86,7 +89,9 @@ Simulated using a realistic blackjack engine based on standard Las Vegas rules:
   - `I`: Buy Insurance (never used)  
   - `N`: No Insurance
 
+
 ---
+
 
 ## Getting Started
 
@@ -127,7 +132,9 @@ Simulated using a realistic blackjack engine based on standard Las Vegas rules:
 - **Algorithm**:  
   - [XGBoost](https://xgboost.readthedocs.io/en/stable/)
 
+
 ---
+
 
 ## Example Output
 ![Example output](assets/Example_Output.PNG)
