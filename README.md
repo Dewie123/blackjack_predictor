@@ -4,7 +4,6 @@ This project implements a machine learning model using **XGBoost** to predict a 
 
 ---
 
-
 ## Demo Video
 
 Watch the YouTube Demo:  
@@ -14,13 +13,41 @@ This video shows the model in action, including how it takes input (dealer up ca
 
 ---
 
-
 ## Project Highlights
 
 - **Win Probability Prediction**: Predicts the likelihood of a player's starting hand beating the dealer’s up card.
 - **Perfect Strategy Recommender**: Suggests the optimal action (Hit, Stand, Double, etc.) according to professional Blackjack strategy.
 - **Data-Driven**: Trained on a simulated dataset of 1 million Blackjack hands, reflecting realistic casino rules and conditions.
 - **Model**: Built using the XGBoost classifier for high performance and interpretability.
+
+---
+
+## Blackjack Rules Overview
+
+Summary of the core rules and terminology relevant to this project. The dataset and model are based on common Las Vegas casino rules, which influence strategy decisions:
+
+- **Objective:**  
+  Beat the dealer by having a hand value closer to 21 without exceeding it (busting).
+
+- **Card Values:**  
+  - Number cards (2–10) count as their face value.  
+  - Face cards (J, Q, K) count as 10.  
+  - Aces count as 1 or 11, whichever benefits the hand most. In the event where an Ace can count as 1 or 11, the total value of the hand is known as a "Soft [value of hand]". 
+  - ie. A5 is known as a Soft 16.
+
+- **Gameplay:**  
+  - Each player starts with two cards; the dealer shows one card face up (the "up card").  
+  - Players decide to:  
+    - **Hit:** Take another card.  
+    - **Stand:** Keep current hand.  
+    - **Double Down:** Double the initial bet and receive exactly one more card.  
+    - **Split:** If the first two cards are the same, split into two hands.  
+    - **Surrender:** Forfeit half the bet and end the hand (late surrender allowed in this dataset).  
+  - Dealer rules:  
+    - Dealer hits on "soft 17" (a hand with an Ace valued as 11 totaling 17).
+
+- **Payouts:**  
+  - Blackjack (Ace + 10-value card) pays 3:2.
 
 ---
 
@@ -54,9 +81,7 @@ Critically, the finalized XGBoost model attained a **remarkable 98% efficacy**, 
 
 Consequently, the marginal gains from deploying a deep neural architecture do not justify the added complexity, opacity, and resource demands. The XGBoost solution represents a **best-in-class synthesis of accuracy, robustness, and transparency**, perfectly suited for this specialized application.
 
-
 ---
-
 
 ## Dataset
 
@@ -89,9 +114,7 @@ Simulated using a realistic blackjack engine based on standard Las Vegas rules:
   - `I`: Buy Insurance (never used)  
   - `N`: No Insurance
 
-
 ---
-
 
 ## Getting Started
 
@@ -132,9 +155,7 @@ Simulated using a realistic blackjack engine based on standard Las Vegas rules:
 - **Algorithm**:  
   - [XGBoost](https://xgboost.readthedocs.io/en/stable/)
 
-
 ---
-
 
 ## Example Output
 ![Example output](assets/Example_Output.PNG)

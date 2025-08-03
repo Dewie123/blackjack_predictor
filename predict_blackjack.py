@@ -75,7 +75,7 @@ if __name__ == "__main__":
         
 
         print("\nPrediction Results:")
-        print(f"Estimated Win %: {win_percent}%")
+        print(f"Estimated Win %: {win_percent:.2f}%")
         print(f"Recommended Action: {switch(action)}")
 
         user_input = input("\nWould you like to continue? [Y/N]: ").strip().upper()
