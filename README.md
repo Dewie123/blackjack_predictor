@@ -126,7 +126,7 @@ Simulated using a realistic blackjack engine based on standard Las Vegas rules:
     cd blackjack_predictor_XGBoost
     ```
 
-2. **Install required packages**:
+2. **Install required packages (Optional, install to train the model)**:
     ```bash
     pip install -r requirements.txt
     ```
