@@ -13,6 +13,39 @@ This project implements a machine learning model using **XGBoost** to predict a 
 
 ---
 
+### Data Exploration and Preprocessing Strategy
+
+A comprehensive exploratory data analysis (EDA) was performed to rigorously characterize the statistical properties and interdependencies within the dataset. Key observations informed a deliberately minimalistic preprocessing approach tailored to the unique characteristics of blackjack gameplay data:
+
+- The dataset contains critical continuous features such as **True Count** and **Shoe Number**, which encapsulate temporal and contextual information fundamental to strategic decision-making in blackjack.
+- Conventional data balancing techniques such as **SMOTE** or synthetic oversampling, while effective in many classification tasks, were deemed unsuitable here. Applying such methods would artificially interpolate new samples, thereby **disrupting inherent feature correlations and sequence-dependent structures**, and introducing spurious patterns inconsistent with actual gameplay dynamics.
+- Maintaining the integrity of the raw data distribution was essential to preserve the fidelity of the feature interactions and avoid biasing the model with synthetic artifacts.
+
+This data-driven rationale underscores the importance of respecting domain-specific data characteristics when selecting preprocessing workflows, particularly in environments governed by mathematically and probabilistically rigorous rules.
+
+### Model Evaluation and Rationale for Choosing XGBoost
+
+Multiple supervised learning algorithms were evaluated to identify the optimal predictive framework capable of modeling the complex, nonlinear relationships inherent in blackjack strategy optimization:
+
+- **Random Forests**: Ensemble tree-based methods offering robustness and interpretability. In testing, Random Forests showed limitations in capturing subtle interaction effects between continuous features with sufficient granularity, and exhibited longer training times.
+  
+- **Deep Neural Networks (DNNs)**: Although DNNs excel at modeling complex feature hierarchies, their application here presents challenges:
+  - Necessitate extensive hyperparameter tuning and risk overfitting due to the relatively low dimensionality and structured nature of the features.
+  - Overcomplication due to fine-tuning activation function (i used elu for this), for minor improvements in accuracy which is irrelevant in this example due to the hard ceiling of model performance(Mathematically-proven perfect strategy)
+
+- **XGBoost (Extreme Gradient Boosting)**: This gradient-boosted decision tree framework emerged as the superior choice, delivering an optimal balance of **predictive performance, computational efficiency, and explainability**. Its advantages include:
+  - Sophisticated regularization mechanisms mitigating overfitting.
+  - Ability to inherently handle mixed continuous and categorical variables.
+  - Fast training leveraging parallel and distributed computing.
+  - Built-in tools for feature importance and SHAP value explanations, enabling clear insight into model decision processes.
+
+Critically, the finalized XGBoost model attained a **remarkable 98% efficacy**, effectively replicating the mathematically proven **Perfect Strategy** employed by expert blackjack players and card counters. This near-perfect alignment confirms the model’s capacity to generalize domain rules without overfitting or reliance on excessive complexity.
+
+Consequently, the marginal gains from deploying a deep neural architecture do not justify the added complexity, opacity, and resource demands. The XGBoost solution represents a **best-in-class synthesis of accuracy, robustness, and transparency**, perfectly suited for this specialized application.
+
+---
+
+
 ## Demo Video
 
 Watch the YouTube Demo:  
@@ -99,5 +132,5 @@ Simulated using a realistic blackjack engine based on standard Las Vegas rules:
 ## Example Output
 ![Example output](assets/Example_Output.PNG)
 
-## Multi Deck Perfect Strategy - Mathematically derived optimal move.
+## Multi Deck Perfect Strategy - Mathematically derived optimal move
 ![Multi Deck Perfect Strategy](assets/Multi_Deck_Perfect_Strategy_Hit_Soft_17.PNG)
