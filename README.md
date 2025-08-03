@@ -21,7 +21,7 @@ A comprehensive exploratory data analysis (EDA) was performed to rigorously char
 - Conventional data balancing techniques such as **SMOTE** or synthetic oversampling, while effective in many classification tasks, were deemed unsuitable here. Applying such methods would artificially interpolate new samples, thereby **disrupting inherent feature correlations and sequence-dependent structures**, and introducing spurious patterns inconsistent with actual gameplay dynamics.
 - Maintaining the integrity of the raw data distribution was essential to preserve the fidelity of the feature interactions and avoid biasing the model with synthetic artifacts.
 
-This data-driven rationale underscores the importance of respecting domain-specific data characteristics when selecting preprocessing workflows, particularly in environments governed by mathematically and probabilistically rigorous rules.
+This approach highlights the critical need to preserve the intrinsic structure of blackjack gameplay data such as card count sequences and true count dynamics when designing preprocessing steps, since disrupting these domain-specific correlations would compromise the model’s ability to accurately replicate the mathematically precise strategies fundamental to optimal blackjack play.
 
 ### Model Evaluation and Rationale for Choosing XGBoost
 
