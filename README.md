@@ -17,14 +17,14 @@ This video shows the model in action, including how it takes input (dealer up ca
 
 - **Win Probability Prediction**: Predicts the likelihood of a player's starting hand beating the dealer’s up card.
 - **Perfect Strategy Recommender**: Suggests the optimal action (Hit, Stand, Double, etc.) according to professional Blackjack strategy.
-- **Data-Driven**: Trained on a simulated dataset of 1 million Blackjack hands, reflecting realistic casino rules and conditions.
-- **Model**: Built using the XGBoost classifier for high performance and interpretability.
+- **Data-Driven**: Trained on 20 million Blackjack hands (20 million Blackjack hands), with casino rules and conditions.
+- **Model**: Built using the XGBoost classifier.
 
 ---
 
 ## Blackjack Rules Overview
 
-Summary of the core rules and terminology relevant to this project. The dataset and model are based on common Las Vegas casino rules, which influence strategy decisions:
+Summary of the core rules and terminology. The dataset and model are based on common Las Vegas casino rules, which influence strategy decisions:
 
 - **Objective:**  
   Beat the dealer by having a hand value closer to 21 without exceeding it (busting).
@@ -53,13 +53,13 @@ Summary of the core rules and terminology relevant to this project. The dataset 
 
 ### Data Exploration and Preprocessing Strategy
 
-A comprehensive exploratory data analysis (EDA) was performed to rigorously characterize the statistical properties and interdependencies within the dataset. Key observations informed a deliberately minimalistic preprocessing approach tailored to the unique characteristics of blackjack gameplay data:
+A comprehensive exploratory data analysis was performed to rigorously characterize the statistical properties and interdependencies within the dataset. Key observations informed a deliberately minimalistic preprocessing approach tailored to the unique characteristics of blackjack gameplay data:
 
 - The dataset contains critical continuous features such as **True Count** and **Shoe Number**, which encapsulate temporal and contextual information fundamental to strategic decision-making in blackjack.
 - Conventional data balancing techniques such as **SMOTE** or synthetic oversampling, while effective in many classification tasks, were deemed unsuitable here. Applying such methods would artificially interpolate new samples, thereby **disrupting inherent feature correlations and sequence-dependent structures**, and introducing spurious patterns inconsistent with actual gameplay dynamics.
 - Maintaining the integrity of the raw data distribution was essential to preserve the fidelity of the feature interactions and avoid biasing the model with synthetic artifacts.
 
-This approach highlights the critical need to preserve the intrinsic structure of blackjack gameplay data such as card count sequences and true count dynamics when designing preprocessing steps, since disrupting these domain-specific correlations would compromise the model’s ability to accurately replicate the mathematically precise strategies fundamental to optimal blackjack play.
+This approach preserves the continuous structure of blackjack gameplay data such as card count sequences and true count dynamics when designing preprocessing steps, since disrupting these domain-specific correlations would compromise the model’s ability to accurately replicate the mathematically precise strategies fundamental to optimal blackjack play.
 
 ### Model Evaluation and Rationale for Choosing XGBoost
 
@@ -71,8 +71,8 @@ Multiple supervised learning algorithms were evaluated to identify the optimal p
   - Necessitate extensive hyperparameter tuning and risk overfitting due to the relatively low dimensionality and structured nature of the features.
   - Overcomplication due to fine-tuning activation function (i used elu for this), for minor improvements in accuracy which is irrelevant in this example due to the hard ceiling of model performance(Mathematically-proven perfect strategy)
 
-- **XGBoost (Extreme Gradient Boosting)**: This gradient-boosted decision tree framework emerged as the superior choice, delivering an optimal balance of **predictive performance, computational efficiency, and explainability**. Its advantages include:
-  - Sophisticated regularization mechanisms mitigating overfitting.
+- **XGBoost (Extreme Gradient Boosting)**: This gradient-boosted decision tree framework delivered an optimal balance of **predictive performance, computational efficiency, and explainability**. Its advantages include:
+  - L1/L2 regularization mechanisms mitigating overfitting.
   - Ability to inherently handle mixed continuous and categorical variables.
   - Fast training leveraging parallel and distributed computing.
   - Built-in tools for feature importance and SHAP value explanations, enabling clear insight into model decision processes.
@@ -161,8 +161,8 @@ Simulated using a realistic blackjack engine based on standard Las Vegas rules:
 
 | File | Description |
 |------|-------------|
-| **`blackjack_model_taka.ipynb`** | Contains the complete machine learning pipeline: data exploration, preprocessing, model definition, training using XGBoost, and SHAP-based model explainability. |
-| **`predict_blackjack.py`** | Loads the pre-trained models and serves as the main interface to predict the player's win percentage and recommend the optimal move based on game state. This script represents the core functionality of the project. |
+| **`blackjack_model_taka.ipynb`** | Contains machine-learning pipeline: data exploration, preprocessing, model definition, training using XGBoost, and SHAP-based model explainability. |
+| **`predict_blackjack.py`** | Loads the pre-trained models and serves as the main interface to predict the player's win percentage and recommend the optimal move based on game state. |
 
 ---
 
