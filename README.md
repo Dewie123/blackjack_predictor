@@ -17,7 +17,7 @@ This video shows the model in action, including how it takes input (dealer up ca
 
 - **Win Probability Prediction**: Predicts the likelihood of a player's starting hand beating the dealer’s up card.
 - **Perfect Strategy Recommender**: Suggests the optimal action (Hit, Stand, Double, etc.) according to professional Blackjack strategy.
-- **Data-Driven**: Trained on 20 million Blackjack hands (20 million Blackjack hands), with casino rules and conditions.
+- **Data-Driven**: Trained on 20 million Blackjack hands (40% of dataset), with casino rules and conditions.
 - **Model**: Built using the XGBoost classifier.
 
 ---
