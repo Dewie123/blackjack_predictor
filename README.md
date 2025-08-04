@@ -122,8 +122,8 @@ Simulated using a realistic blackjack engine based on standard Las Vegas rules:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/blackjack_predictor_XGBoost.git
-    cd blackjack_predictor_XGBoost
+    git clone hhttps://github.com/Dewie123/blackjack_predictor.git
+    cd blackjack_predictor
     ```
 
 2. **Install required packages (Optional, install to train the model)**:
@@ -133,7 +133,7 @@ Simulated using a realistic blackjack engine based on standard Las Vegas rules:
 
 3. **Run the predictor**:
     ```bash
-    python blackjack_predictor.py
+    python predict_blackjack.py
     ```
 
 ---
